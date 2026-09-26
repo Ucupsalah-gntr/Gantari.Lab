@@ -18,7 +18,7 @@ window.GANTARI_LAB_DB = {
     { id:"s-002", nama:"Rafi Pratama", nis:"GTL-0002", kelas_id:"k-3a", orang_tua_id:null, kode_akses:"RAFI02" },
     { id:"s-003", nama:"Zahra Aulia", nis:"GTL-0003", kelas_id:"k-2b", orang_tua_id:null, kode_akses:"ZAHRA03" },
     { id:"s-004", nama:"Aisyah Nabila", nis:"GTL-0004", kelas_id:"k-1a", orang_tua_id:null, kode_akses:"AISYAH04" }
-  ]
+  ],
   absensi: [
     { id:"a-001", siswa_id:"s-001", tanggal:"2026-09-26", status:"hadir", catatan:"", created_by:"u-guru" },
     { id:"a-002", siswa_id:"s-002", tanggal:"2026-09-26", status:"izin", catatan:"Acara keluarga", created_by:"u-guru" },
