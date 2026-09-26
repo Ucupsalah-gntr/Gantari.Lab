@@ -19,6 +19,27 @@ window.GANTARI_LAB_DB = {
     { id:"s-003", nama:"Zahra Aulia", nis:"GTL-0003", kelas_id:"k-2b", orang_tua_id:null, kode_akses:"ZAHRA03" },
     { id:"s-004", nama:"Aisyah Nabila", nis:"GTL-0004", kelas_id:"k-1a", orang_tua_id:null, kode_akses:"AISYAH04" }
   ]
+  absensi: [
+    { id:"a-001", siswa_id:"s-001", tanggal:"2026-09-26", status:"hadir", catatan:"", created_by:"u-guru" },
+    { id:"a-002", siswa_id:"s-002", tanggal:"2026-09-26", status:"izin", catatan:"Acara keluarga", created_by:"u-guru" },
+    { id:"a-003", siswa_id:"s-003", tanggal:"2026-09-26", status:"hadir", catatan:"", created_by:"u-guru" },
+    { id:"a-004", siswa_id:"s-004", tanggal:"2026-09-26", status:"sakit", catatan:"Demam", created_by:"u-guru" },
+    { id:"a-005", siswa_id:"s-001", tanggal:"2026-09-25", status:"hadir", catatan:"", created_by:"u-guru" },
+    { id:"a-006", siswa_id:"s-002", tanggal:"2026-09-25", status:"hadir", catatan:"", created_by:"u-guru" }
+  ],
+  spp: [
+    { id:"p-001", siswa_id:"s-001", bulan:9, tahun:2026, nominal:150000, status:"lunas", dibayar_pada:"2026-09-05" },
+    { id:"p-002", siswa_id:"s-002", bulan:9, tahun:2026, nominal:150000, status:"belum_lunas", dibayar_pada:null },
+    { id:"p-003", siswa_id:"s-003", bulan:9, tahun:2026, nominal:150000, status:"lunas", dibayar_pada:"2026-09-06" },
+    { id:"p-004", siswa_id:"s-004", bulan:9, tahun:2026, nominal:150000, status:"lunas", dibayar_pada:"2026-09-07" }
+  ],
+  perkembangan: [
+    { id:"pk-001", siswa_id:"s-001", tanggal:"2026-09-20", nilai:88, catatan:"Percaya diri saat presentasi." },
+    { id:"pk-002", siswa_id:"s-002", tanggal:"2026-09-21", nilai:82, catatan:"Perlu dorongan saat membaca." },
+    { id:"pk-003", siswa_id:"s-003", tanggal:"2026-09-22", nilai:91, catatan:"Konsisten dan aktif." },
+    { id:"pk-004", siswa_id:"s-004", tanggal:"2026-09-23", nilai:86, catatan:"Kerja sama semakin baik." }
+  ]
+
 };
 
 // Adapter sederhana untuk pengembangan fitur.
