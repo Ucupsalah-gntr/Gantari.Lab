@@ -84,6 +84,7 @@ const DATA = {
     heroText:"Berikut ringkasan kondisi Maryam dari data dummy Gantari.Lab.",
     stats:LAB_DATA.ortuStats
   }
+};
 
 let state = {
   role: "admin",
