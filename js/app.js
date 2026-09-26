@@ -8,7 +8,7 @@
               <div class="brand" title="Gantari — Rumah Belajar Inklusi">
                 <img
                   class="brand-logo"
-                  src="assets/logo-gantari.png"
+                  src="https://raw.githubusercontent.com/Ucupsalah-gntr/Gantariku/main/assets/logo-gantari.png"
                   alt="Gantari — Rumah Belajar Inklusi"
                 >
               </div>
@@ -330,6 +330,19 @@
       // INITIALIZATION
       // ============================================================
       async function init() {
+        if (window.GANTARI_LAB_MODE) {
+          currentUser = {
+            id: "u-admin",
+            user_id: "auth-admin",
+            nama: "Muhammad Fajar",
+            email: "admin@gantarilab.test",
+            role: "admin"
+          };
+          currentUserRole = "admin";
+          currentNav = "dasbor";
+          renderApp();
+          return;
+        }
         try {
           if (!supabase) {
             renderLogin();
