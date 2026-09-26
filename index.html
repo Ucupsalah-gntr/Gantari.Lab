@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gantari.Lab — sandbox UI/UX dan fitur Gantariku">
+  <title>Gantari.Lab — Sandbox Gantariku</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-head">
+        <a class="brand" href="#" aria-label="Gantari">
+          <img
+            class="brand-logo"
+            src="https://raw.githubusercontent.com/Ucupsalah-gntr/Gantariku/main/assets/logo-gantari.png"
+            alt="Gantari"
+          >
+        </a>
+        <button class="icon-button mobile-only" id="closeMenu" type="button" aria-label="Tutup menu">×</button>
+      </div>
+
+      <div class="role-preview" aria-label="Pilih role tampilan">
+        <span class="role-preview-label">Preview Role</span>
+        <div class="role-switch" id="roleSwitch">
+          <button type="button" data-role="admin" class="active">Admin</button>
+          <button type="button" data-role="guru">Guru</button>
+          <button type="button" data-role="ortu">Ortu</button>
+        </div>
+      </div>
+
+      <div class="user-card">
+        <div class="avatar">MF</div>
+        <div>
+          <strong id="userName">Muhammad Fajar</strong>
+          <span id="userRole">Administrator</span>
+        </div>
+      </div>
+
+      <nav class="nav" id="nav" aria-label="Navigasi utama"></nav>
+
+      <div class="sidebar-foot">
+        <div class="status-line"><span class="status-dot"></span> Gantari.Lab aktif</div>
+        <div class="lab-note">Sandbox — tidak menyentuh Gantariku utama.</div>
+      </div>
+    </aside>
+
+    <div class="backdrop" id="backdrop"></div>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-button mobile-only" id="openMenu" type="button" aria-label="Buka menu">☰</button>
+          <div>
+            <div class="eyebrow">Gantari.Lab · UI/UX Sandbox</div>
+            <h1 id="pageTitle">Dasbor</h1>
+            <p id="pageSubtitle">Fondasi tampilan baru sebelum dipindahkan ke Gantariku utama.</p>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <span class="chip">26 September 2026</span>
+        </div>
+      </header>
+
+      <section class="content" id="content"></section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
