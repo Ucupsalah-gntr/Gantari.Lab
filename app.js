@@ -84,44 +84,6 @@ const DATA = {
     heroText:"Berikut ringkasan kondisi Maryam dari data dummy Gantari.Lab.",
     stats:LAB_DATA.ortuStats
   }
-};
-  admin: {
-    title:"Dasbor",
-    subtitle:"Ringkasan operasional sekolah dalam satu layar.",
-    hero:"Selamat datang di Gantari.Lab",
-    heroText:"Di sini kita menguji fondasi UI/UX sebelum menyentuh Gantariku utama. Layout sengaja dibuat ringan, konsisten, dan responsif.",
-    stats:[
-      ["Total Siswa","42","terdaftar",""],
-      ["SPP Lunas","36","85,7%","good"],
-      ["Belum Lunas","6","perlu ditindaklanjuti","bad"],
-      ["Absensi Hari Ini","39/42","92,9% hadir","accent"]
-    ]
-  },
-  guru: {
-    title:"Dasbor Guru",
-    subtitle:"Akses cepat untuk absensi dan perkembangan anak.",
-    hero:"Pagi, Ibu Rina 👋",
-    heroText:"Hari ini fokus pada absensi kelas dan catatan perkembangan. Semua aksi utama dibuat mudah dijangkau dari layar kecil maupun besar.",
-    stats:[
-      ["Siswa Kelas","28","Kelas 3A",""],
-      ["Hadir","26","92,9%","good"],
-      ["Izin / Sakit","2","tercatat hari ini","warn"],
-      ["Catatan Baru","5","belum dibaca wali","accent"]
-    ]
-  },
-  ortu: {
-    title:"Ringkasan Anak",
-    subtitle:"Informasi utama anak ditampilkan tanpa perlu banyak berpindah halaman.",
-    hero:"Halo, Bapak Yusuf 👋",
-    heroText:"Berikut ringkasan kondisi Maryam hari ini: kehadiran, SPP, dan perkembangan anak.",
-    stats:[
-      ["Kehadiran","96,2%","semester berjalan","good"],
-      ["SPP","Lunas","September 2026",""],
-      ["Perkembangan","88","rata-rata terakhir","accent"],
-      ["Catatan Guru","2","catatan terbaru","warn"]
-    ]
-  }
-};
 
 let state = {
   role: "admin",
