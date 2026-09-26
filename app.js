@@ -25,7 +25,66 @@ const ROLE_META = {
   ortu: {name:"Bapak Yusuf", role:"Orang Tua · Maryam"}
 };
 
+const LAB = window.GantariLabData || {
+  list: () => [],
+  findById: () => null
+};
+
+function buildLabData(){
+  const users = LAB.list("pengguna");
+  const classes = LAB.list("kelas");
+  const students = LAB.list("siswa");
+
+  return {
+    users,
+    classes,
+    students,
+    adminStats: [
+      ["Total Siswa", String(students.length), "data dummy aktif", ""],
+      ["SPP Lunas", "3", "dari 4 siswa dummy", "good"],
+      ["Belum Lunas", "1", "perlu ditindaklanjuti", "bad"],
+      ["Absensi Hari Ini", "2/4", "50% hadir di seed", "accent"]
+    ],
+    guruStats: [
+      ["Siswa Kelas", "2", "Kelas 3A", ""],
+      ["Hadir", "1", "50% hari ini", "good"],
+      ["Izin / Sakit", "1", "tercatat hari ini", "warn"],
+      ["Catatan Baru", "2", "contoh untuk pengujian UI", "accent"]
+    ],
+    ortuStats: [
+      ["Kehadiran", "100%", "contoh Maryam", "good"],
+      ["SPP", "Lunas", "September 2026", ""],
+      ["Perkembangan", "88", "rata-rata dummy", "accent"],
+      ["Catatan Guru", "2", "contoh catatan", "warn"]
+    ]
+  };
+}
+
+const LAB_DATA = buildLabData();
+
 const DATA = {
+  admin: {
+    title:"Dasbor",
+    subtitle:"Ringkasan operasional sekolah dalam satu layar.",
+    hero:"Selamat datang di Gantari.Lab",
+    heroText:"Sandbox gratis untuk menguji UI/UX dan alur fitur Gantariku. Data diambil dari mock database, bukan database produksi.",
+    stats:LAB_DATA.adminStats
+  },
+  guru: {
+    title:"Dasbor Guru",
+    subtitle:"Akses cepat untuk absensi dan perkembangan anak.",
+    hero:"Pagi, Ibu Rina 👋",
+    heroText:"Hari ini fokus pada absensi kelas dan catatan perkembangan. Semua aksi utama dibuat mudah dijangkau dari layar kecil maupun besar.",
+    stats:LAB_DATA.guruStats
+  },
+  ortu: {
+    title:"Ringkasan Anak",
+    subtitle:"Informasi utama anak ditampilkan tanpa perlu banyak berpindah halaman.",
+    hero:"Halo, Bapak Yusuf 👋",
+    heroText:"Berikut ringkasan kondisi Maryam dari data dummy Gantari.Lab.",
+    stats:LAB_DATA.ortuStats
+  }
+};
   admin: {
     title:"Dasbor",
     subtitle:"Ringkasan operasional sekolah dalam satu layar.",
@@ -118,7 +177,7 @@ function commonTestBanner(){
     <div class="test-badge">✦</div>
     <div>
       <strong>Mode Lab aktif</strong>
-      <p>Halaman ini adalah playground. Data masih dummy dan belum terhubung ke Supabase.</p>
+      <p>Halaman ini adalah playground. Data masih dummy dan tersimpan lokal di data/mock-db.js; belum ada koneksi ke Supabase.</p>
     </div>
   </div>`;
 }
@@ -156,7 +215,7 @@ function dashboardPage(){
     <div class="grid-2">
       <section class="card">
         <div class="card-head">
-          <div><h3>Aktivitas Ringkas</h3><p>Contoh konten yang akan memakai data Supabase.</p></div>
+          <div><h3>Aktivitas Ringkas</h3><p>Contoh komponen yang membaca data mock tanpa database berbayar.</p></div>
           <button class="button secondary" type="button">Lihat semua</button>
         </div>
         <div class="card-body">
